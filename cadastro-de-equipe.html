@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/cadastro-de-equipe.css">
+</head>
+
+<body>
+    <header>
+
+
+
+        <div class="header-top">
+            <div class="grid-layout alinhamento-between-center">
+                <div class="contatos">
+                    <div class="phone">
+
+                        <img src="assets/icons/icone-telefone.svg" alt="icone do telefone de contato">
+
+                        <p>(11) 0900-1010</p>
+
+                    </div>
+
+
+                    <div class="email">
+
+                        <img src="assets/icons/icone-email.svg" alt="icone do email de contato">
+
+                        <p>contato@gamer.com.br</p>
+
+                    </div>
+
+                </div>
+                <div class="midias-digitais">
+                    <a href="">
+                        <img src="assets/icons/icone-facebook.svg" alt="imagem link do facebook da empresa">
+                    </a>
+
+                    <a href="">
+                        <img src="assets/icons/icone-linkedin.svg" alt="imagem link do linkedin da empresa">
+                    </a>
+
+                    <a href="">
+                        <img src="assets/icons/icone-instagram.svg" alt="imagem link do instagram da empresa">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="header-bottom">
+            <div class="grid-layout alinhamento-between-center">
+                <!-- smatphone -->
+                <!--menu hamburger -->
+                <img class="menu-hamburger" onclick="mostraMenu()" src="assets/icons/bars.svg"
+                    alt="icone de telefone. Abre e fecha o menu principal, no celular">
+
+
+                <!-- desktop -->
+
+                <img class="logo" src="assets/imagem/logotipo-gamer.svg" alt="Logo da empresa">
+
+
+
+                <nav class="menu" id="menu">
+                    <a href="">inicio</a>
+                    <a href="">jogadores</a>
+                    <a href="">equipes</a>
+                    <a href="">noticias</a>
+
+
+
+                    <!-- visivel apenas no mobile -->
+                    <a class="phone">
+                        <img src="assets/icons/icone-telefone.svg" alt="icone do telefone de contato">
+
+                        <p>(11) 0900-1010</p>
+                    </a>
+
+
+                    <a class="email">
+                        <img src="assets/icons/icone-email.svg" alt="icone do email de contato">
+
+                        <p>contato@gamer.com.br</p>
+                    </a>
+
+
+
+                    <div class="midias-digitais">
+
+
+                        <a href="">
+                            <img src="assets/icons/icone-facebook.svg" alt="imagem link do facebook da empresa">
+                        </a>
+
+
+
+                        <a href="">
+                            <img src="assets/icons/icone-linkedin.svg" alt="imagem link do linkedin da empresa">
+                        </a>
+
+
+
+                        <a href="">
+                            <img src="assets/icons/icone-instagram.svg" alt="imagem link do instagram da empresa">
+                        </a>
+                    </div>
+                </nav>
+
+
+                <!-- smatphone -->
+
+                <!-- menu 3 pontinhos -->
+                <img class="tres-pontinhos" onclick="mostrarMenuUsuario()" src="assets/icons/3-pontinhos.svg"
+                    alt="icone 3 pontinhos, abre e fecha o menu do usuario">
+
+
+
+                <!-- desktop -->
+
+                <div class="icones-header-bottom" id="icones-laterais">
+                    <a href="">
+                        <img src="assets/icons/icone-perfil.svg" alt="icone de perfil para o usuario">
+                    </a>
+                    <a href="">
+                        <img src="assets/icons/icone-bag.svg" alt="icone de bolsa para compra">
+                    </a>
+                    <a href="">
+                        <img src="assets/icons/icone-busca.svg" alt="icone lupa de pesquisa">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+
+    <main>
+        <div class="grid-layout">
+            <div class="espaco-cadastro">
+                <h1>Cadastro de equipes</h1>
+                <div class="borda-embaixo"></div>
+
+
+
+                <form action="">
+                    <div class="id">
+                        <input type="text" placeholder="Digite o id da sua equipe">
+                    </div>
+
+
+                    <div class="nome">
+                        <input type="text" placeholder="Digite o nome da sua equipe">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+
+<script>
+    function mostraMenu() {
+        document.getElementById("menu").classList.toggle("mostrar-menu");
+    }
+
+    function mostrarMenuUsuario() {
+        document.getElementById("icones-laterais").classList.toggle("mostrar-menu-usuario")
+    }
+</script>
