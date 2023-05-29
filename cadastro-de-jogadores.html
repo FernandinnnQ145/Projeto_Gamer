@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/cadastro-de-equipe.css">
+    <title>Cadastro de Jogadores</title>
+    <link rel="stylesheet" href="css/cadastro-de-jogadores.css">
 </head>
-
 <body>
     <header>
 
@@ -143,33 +141,99 @@
 
 
     <main>
-        <div class="grid-layout">
-            <div class="espaco-cadastro">
-                <h1>Cadastro de equipes</h1>
-                <div class="borda-embaixo"></div>
+        <section class="banner">
+
+            <article class="grid-layout jogadores-flex container-grid-d">
+
+                <div class="border-gradient">
+
+                    <form action="" class="caixadecadastro">
+                        <h1>Cadastro de jogadores</h1>
+                        <hr>
+
+                        <div class="cadastrojogadores">
+                            <input type="text" placeholder="Digite o ID do jogador...">
+                        </div>
+
+                        <div class="cadastrojogadores">
+                            <input type="text" placeholder="Selecione uma equipe...">
+                        </div>
+
+                        <div class="cadastrojogadores">
+                            <input type="text" placeholder="Digite o nome do jogador...">
+                        </div>
+
+                        <div class="cadastrojogadores">
+                            <input type="text" placeholder="Digite o email do jogador...">
+                        </div>
+
+                        <div class="cadastrojogadores">
+                            <input type="text" placeholder="Digite a senha...">
+                        </div>
+
+                        <button class="cadastrar">Cadastrar</button>
+
+                    </form>
+                </div>
+            </article>
 
 
 
-                <form action="">
-                    <div class="id">
-                        <input type="text" placeholder="Digite o id da sua equipe">
-                    </div>
+            <article class="grid-layout">
+                <table>
+                    <thead>
+
+                        <tr enumeracao-tabela>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Foto</th>
+                            <th> </th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr class="table-line">
+                            <td class="number">1</td>
+                            <td>A</td>
+                            <td>A@gmail.com</td>
+                            <td><img src="assets/icons/Lixinho.svg" alt=""></td>
+                        </tr>
 
 
-                    <div class="nome">
-                        <input type="text" placeholder="Digite o nome da sua equipe">
-                    </div>
-                </form>
+                        <tr class="table-line">
+                            <td class="number">1</td>
+                            <td>A</td>
+                            <td>A@gmail.com</td>
+                            <td><img src="assets/icons/Lixinho.svg" alt=""></td>
+                        </tr>
 
-            </div>
-        </div>
+                        <tr class="table-line">
+                            <td class="number">1</td>
+                            <td>A</td>
+                            <td>A@gmail.com</td>
+                            <td><img src="assets/icons/Lixinho.svg" alt=""></td>
+                        </tr>
+
+                        <tr class="table-line">
+                            <td class="number">1</td>
+                            <td>A</td>
+                            <td>A@gmail.com</td>
+                            <td><img src="assets/icons/Lixinho.svg" alt=""></td>
+                        </tr>
+
+
+                    </tbody>
+
+
+
+
+                </table>
+            </article>
+
+        </section>
     </main>
-
-
-
-
-
-
 
     <footer class="footer">
 
@@ -242,7 +306,7 @@
 
         </div>
     </footer>
-    
+
     <script>
         function mostraMenu() {
             document.getElementById("menu").classList.toggle("mostrar-menu");
@@ -253,7 +317,4 @@
         }
     </script>
 </body>
-
 </html>
-
-

@@ -24,7 +24,6 @@
     font-family: quick;
     src: url(../assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
 }
-
 /* reset css */
 * {
     margin: 0;
@@ -58,7 +57,6 @@ body {
 }
 
 /* mobile first */
-
 
 header {
     position: fixed;
@@ -149,79 +147,189 @@ header .midias-digitais {
 }
 
 
+/* Main */
 
+.banner{
+    background-image: url(../assets/imagem/banner_cadastro_de_jogador\ \(1\).png);
 
-/* main */
-
-main{
-    background-image: url(../assets/imagem/Banner_cadastro_de_Equipe-mobille.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    margin-top: 60px;
     height: 1231px;
 }
 
-main .espaco-cadastro{
-    height: 492px;
-   top: 78px;
-   position: relative;
-   background-color: transparent;
-   border: 1px solid transparent;
-  
-    background-image:  linear-gradient(to right bottom, rgba(27, 20, 38, .6), rgba(60, 3, 65, .38));
-
-}
-main h1{
-    top: 40px;
-    position: relative;
-    font-family: titi-black;
-    font-size: 28px;
-    text-transform: uppercase;
+.jogadores-flex{
+    display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
-}
-main .borda-embaixo{
-    width: 250px;
-    position: relative;
-    border-bottom: #F9AA01 solid 2px;
-    top: 49px;
-    margin: auto;
 }
 
-main form{
-    top: 127px;
-    position: relative;
-    display: flex;
+
+.caixadecadastro{
     flex-direction: column;
-    margin: auto;
-    gap: 24px;
+    background-image: linear-gradient(112.07deg, rgba(27, 20, 38, 0.6) 0%, rgba(60, 3, 65, 0.38) 98.83%);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    border-radius: 8px;
+    color: white;
+    font-family: "titilium web";
+    font-size: 28px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
 }
 
-main form .id, .nome{
-    background-image: linear-gradient(to right, rgba(239, 239, 239, 0.6), rgba(239, 239, 239, 0.1));
-    backdrop-filter: blur(4px);
-    padding: 5px 10px;
+.border-gradient{
+    margin-top: 138px;
+    padding: 1px;
+    height: 670px;
+    width: 800px;
+    background-image: linear-gradient(to right bottom, rgba(255, 255, 255, .5), rgba(255, 255, 255, .0));    
+    border-radius: 8px;
+
+}
+
+.caixadecadastro hr{
+    border: 2px solid #f9aa01;
+    width: 360px;
+    margin-bottom: 80px;
+}
+
+.caixadecadastro h1{
+    font-size: 28px;
+    margin-top: 40px;
+    font-family: "titilium black";
+}
+
+.cadastrojogadores{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 273px;
+    height: 40px;
+    padding: 1.5px;
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.459), rgba(255, 255, 255, 0) );
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.cadastrojogadores input {
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background-image: linear-gradient(90deg, #bbaacc 0%, rgba(217, 217, 217, 0.862) 103.86%);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    color: white;
+    padding-left: 16px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.cadastrojogadores input::placeholder{
+    color: white;
+    font-family: "titilium web";
+    font-size: 16px;
+}
+
+
+
+main .cadastrar{
+    background-color: #f9aa01;
+    width: 243px;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    font-family: "titilium web bold";
+    font-size: 24px;
+}
+
+.caixadecadastro .cadastro{
+    width: 273px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #f9aa01;
+    border: none;
+    font-family: "titilium web bold";
+    font-size: 24px;
+    margin-top: 49px;
+}
+
+/*tabela*/
+
+
+table{
+    width: 100%;
+    border-spacing: 0 15px;
+    margin-top: 90px;
+}
+
+table, tr, td{
+    border-collapse: separate;
+
+}
+
+thead tr th{
+    border-bottom: 3px solid #f9aa01;
+    height: 50px;
+    border-spacing: 14px;
+}
+
+thead{
+    width: 100%;
+}
+
+table th {
+    color: #f9aa01;
+    font-family: 'titilium black';
+    text-transform: uppercase;
+    text-shadow: 0 0 7px black;
+    font-size: 20px;
+}
+
+.table-line{
+    background-image: linear-gradient(112.07deg, rgba(27, 20, 38, 0.6) 0%, rgba(60, 3, 65, 0.38) 98.83%);
+    backdrop-filter: blur(5px);
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    font-family: 'titilium web bold';
+    font-size: 20px;
+    height: 70px;
+    border-spacing: 0 10px;
+    border-collapse: collapse;
     border-radius: 8px;
 }
 
-form input{
-    width: 100%;
-    background-color: transparent;
-    border: none;
+.table-line td{
+    border-collapse: collapse;
 }
-form ::placeholder{
-    color: white;
-    font-family: titi-regular;
-    font-size: 16px;
-    margin-left: 16px;
+
+tbody{
+    border-spacing: 0 1000px;
+    /* background-color: #f9aa01; */
 }
+
+.number{
+    border-radius: 8px 0 0 8px;
+}
+
+
+.table-line td{
+    border-right: 2px solid #f9aa01;
+}
+
+.table-line > td:last-of-type{
+    border-right: none;
+}
+
 
 /* footer */
-
-
-
 .footer {
     background-image: url(../assets/imagem/backgroung_footer.png);
     box-shadow: inset 0px 50px 80px rgb(0, 0, 0, 0.9);
@@ -413,19 +521,7 @@ footer .inside a::before {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (min-width: 768px) {}
 
 /* Desktop >= 1200px*/
 @media screen and (min-width: 1200px) {
@@ -535,7 +631,30 @@ footer .inside a::before {
 
 
 
-    /* footer */
+    /* Main */
+
+    main .banner {
+        background-image: url(../assets/imagem/banner_cadastro_de_jogador_desktoop.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 1372px;
+        width: 100%;
+    }
+    
+    main .cadastrojogadores {
+        width: 565px;
+        height: 40px;
+    }
+    
+    main .cadastrar {
+        font-size: 24px;
+        color: #1b1426;
+    }
+    
+    
+
+
+    /* Footer */
     .footer {
         background-image: url(../assets/imagem/backgroung_footer.png);
         box-shadow: inset 0px 50px 80px rgb(0, 0, 0, 0.9);
@@ -635,20 +754,4 @@ footer .inside a::before {
         width: 126px;
         height: 243px;
     }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
