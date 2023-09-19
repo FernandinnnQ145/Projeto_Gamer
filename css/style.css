@@ -801,6 +801,9 @@ footer .inside a::before {
         background-image: url(../assets/images/banner-background-desktop.png);
         height: 900px;
         border-top: none;
+        background-position: center; /* Centraliza a imagem verticalmente e horizontalmente */
+        background-repeat: no-repeat;
+        background-size: cover; /* Faz a imagem cobrir todo o espaço do banner */
     }
 
     .banner h1 {
@@ -811,6 +814,10 @@ footer .inside a::before {
     .main1 a {
         width: 200px;
         margin-top: 650px;
+    }
+
+    .main1 a:hover{
+        height: 800px;
     }
 
     /* tela azulzinha */
