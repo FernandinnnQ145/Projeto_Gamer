@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="css/login.css">
-
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jogadores.css">
 </head>
 
 <body>
-
     <header>
 
         <div class="container-grid header-flex header-mobile">
@@ -60,15 +58,15 @@
 
             <div id="menu-hamburguer">
 
-                <img class="logotipo-desktop" src="assets/icons/logotipo-gamer.svg" alt="">
+                <img class="logotipo-desktop" src="assets/icons/logotipo-gamer.svg" alt="icone do logotipo gamer">
 
                 <div class="headerbottom-mobile">
 
                     <nav class="links">
 
-                        <a href="">Inicio</a>
-                        <a href="">Jogadores</a>
-                        <a href="">Equipes</a>
+                        <a href="index.html">Inicio</a>
+                        <a href="jogadores.html">Jogadores</a>
+                        <a href="cadastro-de-equipes.html">Equipes</a>
                         <a href="">Noticias</a>
 
                     </nav>
@@ -76,12 +74,12 @@
                     <div class="contatos-mobile">
 
                         <div class="telefone-mobile">
-                            <img src="assets/icons/icone_telefone.svg" alt="">
+                            <img src="assets/icons/icone_telefone.svg" alt="icone de um telefone">
                             <span>(11) 99999-9999</span>
                         </div>
 
                         <div class="email-mobile">
-                            <img src="assets/icons/icone_email.svg" alt="">
+                            <img src="assets/icons/icone_email.svg" alt="icone de um email">
                             <span>contato@gamer.com.br<span>
                         </div>
 
@@ -90,9 +88,9 @@
 
                 <div class="midias-sociais-mobile">
 
-                    <img class="facebook" src="assets/icons/icon-facebbok.svg" alt="">
-                    <img class="linkedin" src="assets/icons/icon-linkedin.svg" alt="">
-                    <img class="instagram" src="assets/icons/icon-instagram.svg" alt="">
+                    <img class="facebook" src="assets/icons/icon-facebbok.svg" alt="icone do facebook">
+                    <img class="linkedin" src="assets/icons/icon-linkedin.svg" alt="icone do linkedin">
+                    <img class="instagram" src="assets/icons/icon-instagram.svg" alt="icone do instagram">
 
                 </div>
 
@@ -103,8 +101,8 @@
                 <div class="icons-usuario">
 
                     <a href="login.html"><input type="image" src="assets/icons/icon-user.svg"></a>
-                    <img src="assets/icons/icon-shop.svg" alt="">
-                    <img src="assets/icons/icon-lupa.svg" alt="">
+                    <img src="assets/icons/icon-shop.svg" alt="icone de uma sacola">
+                    <img src="assets/icons/icon-lupa.svg" alt="icone de uma lupa">
 
                 </div>
 
@@ -115,43 +113,98 @@
     </header>
 
     <main>
-
         <section class="banner">
 
-            <article class="container-grid login-flex container-grid-d">
+            <article class="container-grid jogadores-flex container-grid-d">
 
                 <div class="border-gradient">
 
-                    <div class="login">
-                        <h1>Login</h1>
+                    <form action="" class="caixadecadastro">
+                        <h1>Cadastro de jogadores</h1>
                         <hr>
 
-                        <div class="barradelogin">
-
-                            <div class="icon-input">
-                                <img src="assets/icons/icon-user-branco.png" alt="">
-                                <input type="email" placeholder="Digite seu email...">
-                            </div>
-
+                        <div class="cadastrojogadores">
+                            <input type="text" placeholder="Digite o ID do jogador...">
                         </div>
 
-                        <div class="barradelogin">
-
-                            <div class="icon-input">
-                                <img src="assets/icons/icon-chave.png" alt="">
-                                <input type="password" placeholder="Digite sua senha...">
-                            </div>
-
+                        <div class="cadastrojogadores">
+                            <input type="text" placeholder="Selecione uma equipe...">
                         </div>
 
-                        <button>Logar</button>
+                        <div class="cadastrojogadores">
+                            <input type="text" placeholder="Digite o nome do jogador...">
+                        </div>
 
-                    </div>
+                        <div class="cadastrojogadores">
+                            <input type="text" placeholder="Digite o email do jogador...">
+                        </div>
+
+                        <div class="cadastrojogadores">
+                            <input type="text" placeholder="Digite a senha...">
+                        </div>
+
+                        <button class="cadastrar">Cadastrar</button>
+
+                    </form>
                 </div>
             </article>
 
-        </section>
 
+
+            <article class="container-grid">
+                <table>
+                    <thead>
+
+                        <tr enumeracao-tabela>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Foto</th>
+                            <th> </th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr class="table-line">
+                            <td class="number">1</td>
+                            <td>João</td>
+                            <td>Joao@gmail.com</td>
+                            <td><img src="assets/icons/lixinho.png" alt=""></td>
+                        </tr>
+
+
+                        <tr class="table-line">
+                            <td class="number">1</td>
+                            <td>João</td>
+                            <td>Joao@gmail.com</td>
+                            <td><img src="assets/icons/lixinho.png" alt=""></td>
+                        </tr>
+
+                        <tr class="table-line">
+                            <td class="number">1</td>
+                            <td>João</td>
+                            <td>Joao@gmail.com</td>
+                            <td><img src="assets/icons/lixinho.png" alt=""></td>
+                        </tr>
+
+                        <tr class="table-line">
+                            <td class="number">1</td>
+                            <td>João</td>
+                            <td>Joao@gmail.com</td>
+                            <td><img src="assets/icons/lixinho.png" alt=""></td>
+                        </tr>
+
+
+                    </tbody>
+
+
+
+
+                </table>
+            </article>
+
+        </section>
     </main>
 
     <footer class="footer">
@@ -225,9 +278,7 @@
 
         </div>
     </footer>
-
-
-
+    
     <script>
 
         function mostrarMenu() {
@@ -237,9 +288,6 @@
             document.getElementById("menu-trespontinhos").classList.toggle("mostrarMenuDireita")
         }
     </script>
-
 </body>
-
-
 
 </html>

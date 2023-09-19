@@ -1,249 +1,476 @@
-/* imports de fonts */
-@font-face {
-    font-family: inter;
-    src: url(../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+/*---------------------------------------------------FONTES-----------------------------------------------------------------------*/
 
+@font-face {
+    font-family: "quicksand";
+    src: url(../assets/fonts/Quicksand-Regular.ttf);
 }
 
 @font-face {
-    font-family: titi-black;
-    src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Black.ttf);
+    font-family: "inter";
+    src: url(../assets/fonts/Inter-Regular.ttf);
 }
 
 @font-face {
-    font-family: titi-bold;
-    src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Bold.ttf);
+    font-family: "titilium web";
+    src: url(../assets/fonts/TitilliumWeb-Regular.ttf);
 }
 
 @font-face {
-    font-family: titi-regular;
-    src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
+    font-family: "titilium web italic";
+    src: url(../assets/fonts/TitilliumWeb-Italic.ttf);
 }
 
 @font-face {
-    font-family: quick;
-    src: url(../assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
-}
-@font-face {
-    font-family: quick-regular;
-    src: url(../assets/fonts/Quicksand/static/Quicksand-Regular.ttf);
+    font-family: "titilium web bold";
+    src: url(../assets/fonts/TitilliumWeb-Bold.ttf);
 }
 
-/* reset css */
+@font-face {
+    font-family: "titilium black";
+    src: url(../assets/fonts/TitilliumWeb-Black.ttf);
+}
+
+/* RESET css */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.grid-layout {
+/* configuracoes genericas */
+
+.mostrarMenu {
+    left: 0 !important;
+    opacity: 1 !important;
+}
+
+.mostrarMenuDireita {
+    right: 0 !important;
+    opacity: 1 !important;
+}
+
+.container-grid {
     width: 90%;
     margin: 0 auto;
-    height: 100%;
-}
-
-.mostrar-menu {
-    left: 0 !important;
-}
-
-.mostrar-menu-usuario {
-    right: 0 !important;
-}
-
-.alinhamento-between-center {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    max-width: 768px;
 }
 
 body {
-
-    color: white;
+    background-color: #1b1426;
 }
 
-/* mobile first */
-
+/* ------------------------------------------------------------------HEADERmobile------------------------------------------ */
 
 header {
     position: fixed;
-    width: 100vw;
-    height: 60px;
-    z-index: 100;
-    background-color: #1B1426;
     top: 0;
+    left: 0;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: #1b1426;
 }
 
-header .header-top {
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logotipo-desktop {
+    display: none;
+}
+
+.primeiraparte-header {
     display: none;
 }
 
 
-header .header-bottom {
-    height: 60px;
-}
-
-
-header .logo {
-    width: 86px;
-}
-
-
-header .icones-header-bottom {
-    width: 20vw;
-    height: 170px;
+#menu-hamburguer {
+    position: fixed;
     top: 60px;
-    right: -20vw;
+    left: -270px;
+    width: 270px;
+    height: calc(100vh - 60px);
+    display: flex;
+    z-index: 1000;
+    transition: left 0.4s, opacity 0.5s;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(rgb(27, 20, 38, 70%), rgb(27, 20, 38, 40%));
+    backdrop-filter: blur(2px);
+    box-shadow: 5px 0px 30px;
+
+}
+
+.links {
+    text-align: center;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    height: 346px;
+    width: 100%;
+}
+
+.links a {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: none;
+    font-family: "inter";
+    font-size: 15px;
+    color: white;
+    border-bottom: 2px solid #f9aa01;
+    height: 80px;
+    width: 270px;
+}
+
+.contatos-mobile span {
+    font-family: "inter";
+    font-size: 15px;
+    color: white;
+}
+
+.contatos-mobile {
+    width: 100%;
+    text-align: center;
+}
+
+.telefone-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    border-bottom: 2px solid #f9aa01;
+    height: 80px;
+}
+
+.telefone-mobile img {
+    margin-left: 40px;
+}
+
+.telefone-mobile span {
+    margin-right: 40px;
+}
+
+.email-mobile {
+    display: flex;
     align-items: center;
     justify-content: space-around;
-    position: fixed;
-    z-index: 101;
-    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
-    backdrop-filter: blur(45px);
-    transition: 1.2s;
+    line-height: 80px;
 }
 
+.email-mobile img {
+    margin-left: 30px;
+}
 
+.email-mobile span {
+    margin-right: 10px;
+}
 
-
-header .header-bottom nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: 101;
-
+#menu-trespontinhos {
     position: fixed;
     top: 60px;
-    left: -80vw;
-    width: 80vw;
-    height: calc(100vh - 60px);
-    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
-    backdrop-filter: blur(45px);
-    transition: 0.9s;
-}
-
-
-header .header-bottom nav>a {
-    display: flex;
-    justify-content: center;
+    right: -66px;
+    width: 66px;
+    height: 170px;
+    background-image: linear-gradient(rgb(27, 20, 38, 70%), rgb(27, 20, 38, 40%));
+    backdrop-filter: blur(5px);
+    box-shadow: 5px 0px 30px;
     align-items: center;
-    gap: 20px;
-
-    padding: 30px 0;
-    color: white;
-    text-decoration: none;
-    font-family: inter;
-    font-size: 15px;
-    border-bottom: 1px solid #F9AA01;
-}
-
-
-
-header .header-bottom nav a:last-of-type {
-    border-bottom: none;
-}
-
-header .midias-digitais {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin-top: 65px;
-    margin-bottom: 42px;
+    z-index: 10;
+    transition: right 0.4s, opacity 0.5s;
+    opacity: 0;
 }
 
-/* main */
-main .banner-mobille {
-    background-image: url(../assets/imagem/valorant-pergunte-3-scaled\ 1.png);
+.icons-usuario {
+    display: flex;
+    flex-direction: column;
+    width: 20px;
+    height: 138px;
+    justify-content: space-between;
+}
+
+.primeiraparte-header-mobile {
+    display: flex;
+    flex-direction: column;
+    height: 510px;
+}
+
+.midias-sociais-mobile {
+    margin-bottom: 10px;
+    display: flex;
+    width: 152px;
+    height: 31px;
+    justify-content: space-between;
+}
+
+/* ------------------------------------------------MAINmobile---------------------------------------------------- */
+
+.banner {
+    background-image: url(../assets/images/backgorund-mobile-banner.png);
     background-repeat: no-repeat;
-    background-position: bottom;
     background-size: cover;
-    height: 605px;
-    width: 100%;
-    margin-top: 60px;
+    height: 606px;
+    border-top: inset 60px transparent;
+    box-sizing: border-box
 }
 
-
-
-
-
-
-main .banner-info-mobille {
+.main1 {
+    height: 503px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 517px;
 }
 
-.banner {
+.main1 h1 {
+    margin-top: 20px;
+    color: white;
+    font-family: "titilium web";
+    font-size: 40px;
+    text-shadow: 0px 0px 7px #FF0000;
+}
+
+.banner a {
+    text-decoration: none;
+    width: 170px;
+    height: 40px;
+    color: #1b1426;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #f9aa01;
+    font-family: "titilium web bold";
+    font-size: 24px;
+}
+
+/* sessao azul */
+
+.main2 {
+    position: relative;
+    height: 590px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: -1;
+}
+
+
+.fifa-cs {
+    width: 337px;
+    position: relative;
+}
+
+.fifa-cs img {
+    position: relative;
+    width: 100%;
+    height: 189px;
+}
+
+
+
+/* sessao amarela */
+
+.progamer {
+    background-color: #f9aa01;
+    height: 1535px;
+}
+
+.progamer h2 {
+    font-size: 18px;
+    font-family: "titilium black";
+    text-align: center;
+    padding-top: 70px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+}
+
+.progamer hr {
+    width: 204px;
+    margin: 0 auto 100px;
+    border: 1px solid #1b1426;
+}
+
+
+.caixinha {
+    position: relative;
+}
+
+.c1 {
+    margin-bottom: 300px;
+}
+
+.c2{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.border-gradient {
+    padding: 1px;
+    width: 210px;
+    background-image: linear-gradient(to right bottom, rgba(255, 255, 255, .5), rgba(255, 255, 255, .1));
+    border-radius: 8px;
+    z-index: 1;
+    position: absolute;
+    top: 100px;
+    left: 127px;
+}
+
+
+.border-gradient2 {
+    padding: 1px;
+    width: 210px;
+    background-image: linear-gradient(to right bottom, rgba(255, 255, 255, .5), rgba(255, 255, 255, .1));
+    border-radius: 8px;
+    z-index: 1;
+    position: absolute;
+    top: 100px;
+    right: 127px;
+}
+
+.professores p {
+    font-size: 12px !important;
+}
+
+
+
+.Croxa {
+    height: 262px;
+    background: linear-gradient(to right bottom, rgba(122, 49, 236, .2), rgba(47, 7, 109, 0.8));
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+.Croxa h3 {
+    font-size: 16px;
+    font-family: "titilium web";
+    color: white;
+    text-transform: uppercase;
+
+}
+
+.Croxa p {
+    color: white;
+    font-family: "quicksand";
+    font-size: 14px;
+    text-align: justify;
+    padding-left: 25px;
+    padding-right: 25px;
+
+}
+
+.professores img {
+    margin-left: 20px;
+}
+
+.jinx-mobile {
+    width: 332px;
+    height: 428px;
+}
+
+.kiljoy-mobile {
+    width: 314px;
+    height: 511px;
+}
+
+.kiljoy-desktop {
     display: none;
 }
 
-main h1 {
-    font-family: titi-black;
-    color: FFFFFF;
-    font-size: 40px;
-    text-shadow: 2px 2px 7px red;
-
+.jinx-desktop {
+    display: none;
 }
 
-main a {
-    color: #1B1426;
-    font-size: 24px;
-    font-family: titi-bold;
-    text-decoration: none;
-
+.Croxa .user {
+    width: 97px;
+    height: 96px;
 }
 
-main .caixa-sobre {
-    width: 170px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #F9AA01;
+.Croxa .controle {
+    width: 97px;
+    height: 97px;
+}
+
+/* sessao noticias */
+
+.noticias {
+    background-image: url(../assets/images/back-ground\ noticias.svg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 3675px;
+}
+
+
+
+.card img {
+    width: 100%;
+}
+
+.noticias h2 {
+    position: relative;
+    color: white;
+    font-size: 15px;
+    font-family: "titilium web";
+    text-align: center;
+    padding-top: 70px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+}
+
+.noticias hr {
+    position: relative;
+    width: 204px;
+    margin: 0 auto 60px;
+    border: 1px solid #f9aa01;
+}
+
+.textnoticias {
     border-radius: 8px;
+    width: 100%;
+    height: 387px;
+    background-image: linear-gradient(141.58deg, rgba(37, 26, 52, 0.34) 0%, rgba(5, 1, 12, 0.79) 98.48%);
+    backdrop-filter: blur(3px);
+    color: white;
 }
 
-main .caixa-sobre:hover {
-    width: 175px;
-    height: 45px;
-    box-shadow: 2px 2px 8px black;
+.textnoticias h4 {
+    font-family: "titilium web";
+    font-size: 24px;
+    font-weight: 1;
+    padding: 25px 25px 0 25px;
+}
+
+.textnoticias p {
+    padding: 20px 25px 0 25px;
+    font-family: "quicksand";
+    font-size: 16px;
+}
+
+.card {
+    margin-bottom: 20px;
 }
 
 
-
-/* section */
-
-main .jogos {
-    background-color: #1B1426;
-    height: 590px;
-}
-
-main section .layout-jogos {
-    justify-content: space-evenly;
-    display: flex;
-    flex-direction: column;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* footer */
-
-
-
+/* ----------------------------------------------------------FOOTERmobile------------------------------------------------ */
 .footer {
-    background-image: url(../assets/imagem/backgroung_footer.png);
+    background-image: url(../assets/images/fundo-footer-mobile.png);
     box-shadow: inset 0px 50px 80px rgb(0, 0, 0, 0.9);
     background-size: cover;
     height: 1531px;
@@ -398,7 +625,7 @@ h2 {
     justify-content: center;
     /* border: 1px solid green; */
     width: 100%;
-   
+    height: 46px;
 }
 
 .footer-bottom a {
@@ -423,393 +650,324 @@ footer .inside a::before {
     align-self: center;
 }
 
+/* ------------------------------------------------ MEDIA QUERIES ---------------------------------------------------- */
 
+@media screen and (min-width:992px) {
 
+    /* CONFIG GENERICA */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (min-width: 768px) {}
-
-/* Desktop >= 1200px*/
-@media screen and (min-width: 1200px) {
-
-    .layout-grid {
+    .container-grid-d {
         width: 100%;
-        max-width: 1200px;
+        margin: 0 auto;
+        max-width: 1280px;
+        /* border: 1px solid green; */
     }
 
-    /* header */
+    /*----------------------------------------------------HEADERdesktop-----------------------------------------------------*/
+    .header-mobile {
+        display: none;
+    }
+
     header {
         position: static;
         height: 140px;
-        width: 100%;
+        align-items: flex-start;
+        flex-direction: column;
     }
 
-    header .header-top {
-        display: block;
-        border-bottom: 2px solid #F9AA01;
+
+    .primeiraparte-header {
+        display: flex;
+        border-bottom: 2px solid #f9aa01;
+        width: 100%;
         height: 50px;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contatos {
+        display: flex;
+        justify-content: space-between;
+        width: 431px;
+    }
+
+    .telefone {
+        width: 168px;
+    }
+
+    .email {
+        width: 218px;
+    }
+
+    .contatos a {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-decoration: none;
+        align-items: center;
+        color: white;
+        font-family: "inter";
+        font-size: 12px;
+    }
+
+    .midias-sociais {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 127px;
+    }
+
+    .logotipo-desktop {
+        display: block;
+    }
+
+    .segundaparte-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 90px;
         width: 100%;
     }
 
-    header .header-top .contatos {
-        display: flex;
+    #menu-hamburguer {
+        width: 867px;
+        position: static;
+        height: auto;
+        flex-direction: row;
         justify-content: space-between;
-        align-items: center;
-        width: 450px;
-        font-family: inter;
-        font-size: 14px;
-        font-weight: 400;
+        opacity: 1;
+        box-shadow: none;
+        background-image: none;
+        backdrop-filter: none;
+        height: max-content;
     }
 
-    /* divs .phone, .mail */
-    header .header-top .contatos>div {
+    .headerbottom-mobile {
         display: flex;
-        gap: 10px;
-        width: 200px;
+        width: 420px;
         align-items: center;
-
+        justify-content: center;
+        height: max-content;
     }
 
-
-    header .header-top .midias-sociais {
-        width: 140px;
-        justify-content: space-between;
-        align-items: center;
-        display: flex;
-    }
-
-    header .midias-digitais {
-        margin: 0 0
-    }
-
-    /* esconde os elementos desnecessários */
-    .header-bottom .menu-hamburger,
-    header .header-bottom .tres-pontinhos,
-    header .header-bottom nav .phone,
-    header .header-bottom nav .email,
-    header .header-bottom nav .midias-digitais {
+    .midias-sociais-mobile,
+    .contatos-mobile {
         display: none;
     }
 
-    header .header-bottom {
-        height: 92px;
-
-    }
-
-    header .logo {
-        width: 200px;
-    }
-
-    header .header-bottom nav {
-        position: static;
-        width: 440px;
-        height: 50px;
-        padding-bottom: 0;
+    .links {
         flex-direction: row;
-        align-items: center;
-        /* background-color: red; */
-        justify-content: space-between;
-        transition: none;
+        width: 420px;
+        height: max-content;
     }
 
-    header .header-bottom nav>a {
-        font-size: 14px;
-        padding: 0;
+    .links a {
+        height: max-content;
         border: none;
+        margin-right: 59px;
     }
 
-    header .header-bottom .icones-header-bottom {
+    #menu-trespontinhos {
+        right: 0;
+        opacity: 1;
         position: static;
-        width: 140px;
-        flex-direction: row;
-        height: auto;
-        background-color: transparent;
         background-image: none;
-        transition: none;
+        backdrop-filter: none;
+        flex-direction: row;
         justify-content: space-between;
+        box-shadow: none;
+        width: 130px;
+        height: 30px;
     }
 
-    header .header-top .contatos img {
-        width: 25px;
+    .icons-usuario {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 130px;
         height: 25px;
     }
 
-
-    main {
-        margin-top: 0;
+    .links a:hover {
+        color: #f9aa01;
     }
 
-    .banner-mobille {
+    /* --------------------------------------------------------MAINdesktop----------------------------------------------------------- */
+
+
+    .banner {
+        background-image: url(../assets/images/banner-background-desktop.png);
+        height: 900px;
+        border-top: none;
+    }
+
+    .banner h1 {
+        font-size: 80px;
+        font-family: "titilium black";
+    }
+
+    .main1 a {
+        width: 200px;
+        margin-top: 650px;
+    }
+
+    /* tela azulzinha */
+
+    .main2 {
+        flex-direction: row;
+        height: 500px;
+        justify-content: space-between;
+    }
+
+    .fifa-cs {
+        width: 45%;
+        height: 313px;
+        justify-content: space-between;
+    }
+
+    .fifa-cs img {
+        height: 100%;
+    }
+
+    /* Secao amarela desktop */
+
+    .progamer {
+        height: 1000px;
+    }
+
+    .progamer h2 {
+        font-size: 40px;
+        font-family: "titilium black";
+    }
+
+    .infos {
+        display: flex;
+        justify-content: space-between;
+        height: 719px;
+    }
+
+    .border-gradient {
+        width: 360px;
+        height: 440px;
+    }
+
+    .border-gradient2 {
+        width: 360px;
+        height: 440px;
+    }
+
+    .Croxa {
+        justify-content: flex-start;
+        width: 360px;
+        height: 440px;
+    }
+
+    .Croxa h3 {
+        margin-top: 23px;
+        font-size: 25px;
+    }
+
+    .Croxa p {
+        margin-top: 10px;
+        font-size: 16px;
+        width: 248px;
+        height: 49px;
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+
+    #prof {
+        font-size: 16px;
+    }
+
+    .Croxa .controle {
+        margin-top: 56px;
+        width: 143px;
+        height: 143px;
+    }
+
+    .Croxa .user {
+        margin-top: 38px;
+        width: 162px;
+        height: 162px;
+    }
+
+    .border-gradient {
+        left: 230px;
+        top: 150px;
+    }
+
+    .border-gradient2 {
+        right: 250px;
+        top: 150px;
+    }
+
+    .caixinha {
+        bottom: 60px;
+    }
+
+    .c2 {
+        position: relative;
+        bottom: 40px;
+    }
+
+    .c2 img {
+        width: 521px;
+        height: 692px;
+        margin-top: -40px;
+    }
+
+    .kiljoy-mobile {
         display: none;
     }
 
-    main .banner {
-        display: block;
-        background-image: url(../assets/imagem/Banner_background_1.png);
-        background-position: bottom;
-        width: 100%;
-        background-size: cover;
-        background-position: bottom;
-        background-repeat: no-repeat;
-        height: 720px;
-        margin-top: 0;
-
-    }
-
-
-    .banner-info {
+    .kiljoy-desktop {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        height: 600px
     }
 
-    main .jogos {
-        height: 500px;
+    .jinx-mobile {
+        display: none;
     }
 
-
-    main .jogos .layout-jogos {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    main .jogos img {
-        width: 556px;
-        height: 313px;
-    }
-
-
-
-
-
-
-
-    main .parte-convite {
-        height: 1000px;
-        width: 100%;
-        background-color: #F9AA01;
-        padding-top: 85px;
-    }
-
-
-    .parte-convite h2 {
-        font-family: titi-black;
-        font-size: 40px;
-        color: #1B1426;
-        text-transform: uppercase;
-    }
-
-    .borda-pequena {
-        width: 199px;
-        height: 35px;
-        border-bottom: 2px solid #1B1426;
-
-    }
-
-    .parte-convite .box-h2 {
-        width: 100%;
-        height: 96px;
+    .jinx-desktop {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    }
 
+    /*  sessao das noticias desktop  */
+
+    .noticias {
+        background-image: url(../assets/images/back-ground\ noticias.svg);
+        height: 100%;
 
     }
 
-    .textos-progamer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 40px;
-
-
+    .noticias h2 {
+        font-size: 40px
     }
 
-   
-
-    .texto-killjoy {
-        position: absolute;
-        margin-left: 280px;
-
-    }
-
-    .texto-jinx {
-        position: absolute;
-        right: 344px;
-
-    }
-
-    .parte-killjoy {
-        display: flex;
-        flex-direction: row;
-    }
-
-
-
-
-    .parte-convite .texto-killjoy,
-    .texto-jinx {
-        width: 360px;
-        height: 440px;
-        background-image: linear-gradient(to left top, rgba(47, 7, 109, .83), rgba(122, 49, 236, .20));
-        backdrop-filter: blur(15px);
-        border-radius: 8px;
-        margin-top: 194px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .textos-progamer p {
-        width: 248px;
-        font-size: 16px;
-        color: white;
-        font-family: quick;
-        margin-top: 28px;
-    }
-
-    .textos-progamer .texto-jinx img {
-        margin-top: 35px;
-    }
-
-    .textos-progamer .texto-killjoy img {
-        margin-top: 35px;
-    }
-
-    .textos-progamer .texto-killjoy h3 {
-        font-family: titi-black;
-        font-size: 25px;
-        margin-top: 28px;
-        text-shadow: 2px 2px 10px #C6A5E5;
-        text-transform: uppercase;
-    }
-
-    .textos-progamer .texto-jinx h3 {
-        font-family: titi-black;
-        font-size: 25px;
-        margin-top: 28px;
-        text-shadow: 2px 2px 10px #C6A5E5;
-        text-transform: uppercase;
-    }
-
-
-
-
-    main .novidades {
-        background-image: url(../assets/imagem/backgrund_notícias.png);
-        background-repeat: no-repeat;
-        background-position: bottom;
-        background-size: cover;
-        height: 1175px;
-    }
-
-    .novidades h4 {
-        font-family: titi-black;
-        font-size: 40px;
-        text-transform: uppercase;
-      
-    }
-
-    .novidades .borda-noticia{
-        width: 204px;
-        border-bottom: #F9AA01 2px solid;
-    }
-
-    .novidades .titulo-noticia{
-        display: flex;
-        align-items: center;
-        top: 93px;
-        position: relative;
-        flex-direction: column;
-    }
-
-    .novidades .noticias .noticia-1, .noticia-2, .noticia-3, .noticia-4, .noticia-5, .noticia-6, .noticia-7, .noticia-8 {
+    .card {
         width: 285px;
         height: 387px;
-        background-image: linear-gradient(to right, rgba(37, 26, 52, 0.34), rgba(5, 1, 12, .79));
-        border-radius: 8px;
-        
+        margin-bottom: 60px;
+        transition: box-shadow 0.5s;
     }
-    
-    .noticias .noticias-cima{
-        position: relative;
-        margin-top: 158px;
+
+    .card:hover {
+        box-shadow: 15px 0px 35px;
+    }
+
+    .news-flex {
         display: flex;
-        flex-direction: row;
-        align-items: center;
+        flex-wrap: wrap;
         justify-content: space-between;
     }
 
-    .noticias .noticias-baixo{
-        position: relative;
-        margin-top: 62px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
+    /* ----------------------------------------------------FOOTERdesktop------------------------------------------------------- */
 
-    .conteudo-noticia{
-        width: 241px;
-        text-align: justify;
-        margin: auto;
-    }
-
-    .noticias h5{
-        font-family: titi-bold;
-        font-size: 24px;
-        margin-top: 16px;
-        position: relative;
-    }
-    .noticias p{
-        font-family: quick-regular;
-        font-size: 16px;
-        margin-top: 16px;
-        position: relative;
-    }
-
-    /* footer */
     .footer {
-        background-image: url(../assets/imagem/backgroung_footer.png);
+        background-image: url(../assets/images/backgroung_footer.png);
         box-shadow: inset 0px 50px 80px rgb(0, 0, 0, 0.9);
         height: 520px;
         display: flex;
